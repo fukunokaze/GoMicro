@@ -1,0 +1,23 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type ItemMaster{
+  itemId: ID!
+  itemNumber: String!
+  itemName: String!
+}
+
+input NewItemMaster{
+  itemNumber: String!
+  itemName: String!
+}
+
+type Mutation {
+  createItemMaster(input: NewItemMaster!): ItemMaster!
+}
+
+type Query {
+  getAllItemMaster: [ItemMaster!]!
+}
+
